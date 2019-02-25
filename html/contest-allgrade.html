@@ -1,0 +1,1533 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>대회일정</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/keep.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/header.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/footer.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/animation.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/contest-allgrade.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/sidemenu-contestpage.css"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script src="../js/keep.js"></script>                 <!--공통-->
+    <script src="../js/mobilesidemenu.js"></script>
+    <script src="../js/gradeselect.js"></script>          <!--학년선택버튼-->
+    <script src="../js/sidemenu-abc.js"></script>           <!--pc 사이드메뉴-->
+
+
+
+</head>
+<body class="fadeIn">
+
+
+        <div class="menu-side">
+            <a class="menu-side-close" onclick="closeNav()" style="cursor: pointer;">&times;</a>
+            <a href="main.html">메인</a>
+            <a href="club-main.html">동아리</a>
+            <a href="contest-allgrade.html">대회</a>
+            <a href="intro.html">학교소개</a>
+            <a onclick="url_confirm_road()">로드뷰</a>
+            <a href="tip.html">학교생활 Tip</a>
+        </div>
+        <div class="menu-side-open" onclick="openNav()">
+            <i class="fas fa-bars menu-side-open-icon"></i>
+        </div>
+        <div class="main-container">
+
+        <div class="menu-bar wow fadeInDown" data-wow-duration="1s">
+            <a href="main.html">메인</a>
+            <a href="club-main.html">동아리</a>
+            <a href="contest-allgrade.html">대회</a>
+            <a href="intro.html">학교소개</a>
+            <a onclick="url_confirm_road()">로드뷰</a>
+            <a href="tip.html">학교생활 Tip</a>
+        </div>
+        <div class="header">
+          <div class="header-title">
+            <a href="contest-allgrade.html" >Contest Schedule</a>
+          </div>
+          <div class="header-sub">
+            <p>서라벌 대회 일정</p>
+          </div>
+          <div class="exsentence-title" >
+            <p>-학년을 선택해주세요-</p>
+          </div>
+          <div class="gradeselector">
+            <a class="gradebutton" onclick="changeGrade(0)">
+              1학년
+            </a>
+            <a class="gradebutton" onclick="changeGrade(1)">
+              2학년
+            </a>
+            <a class="gradebutton" onclick="changeGrade(2)">
+              3학년
+            </a>
+          </div>
+          <div class="exsentence" id="exsentence">
+            <p>※ 2019학년도 대회일정은 추후 업데이트 될 예정입니다.</p>
+          </div>
+        </div>
+        <!--<div class="rule-main-box-main">
+          <div class="intro-title" style=""><서라벌고등학교 대회 일정></div>
+          <p class="sub-title">대회일정 페이지에 오신걸 환영합니다!</p>
+          <p class="sub-title">
+            -학년을 선택해보세요-<br>
+            <br>
+          </p>
+          <div class="intro-tip-box">
+            <p id="intro-tip-text">TIP!</p>
+            <p id="intro-tip-text">계열구분: 이공, 인문, 공통</p>
+            <p id="intro-tip-text">대회신청: < <a href="https://sorabol.riroschool.kr/" target="_blank" class=intro-hyperlink>서진솔</a> 바로가기 > </p>
+            <p id="intro-tip-text">수상비율: 참가자의 20%</p>
+            <p id="intro-tip-text">※ 계열구분은 참가대상과는 관련이 없습니다</p>
+          </p>
+        </div>-->
+        <div class="contest-main-null">
+          <div class="intro-title">대회일정 페이지에 오신걸 환영합니다!</div>
+          <p class="sub-title">
+            -학년을 선택하여 무슨 대회가 있는지 알아보세요-<br>
+            <br>
+          </p>
+          <div class="intro-tip-box">
+            <p id="intro-tip-text">TIP!</p>
+            <p id="intro-tip-text">계열구분: 이공, 인문, 공통</p>
+            <p id="intro-tip-text">대회신청: <a href="https://sorabol.riroschool.kr/" target="_blank" class=intro-hyperlink>서진솔</a> 바로가기 > </p>
+            <p id="intro-tip-text">수상비율: 참가자의 20%</p>
+            <p id="intro-tip-text">※ 계열구분은 참가대상과는 관련이 없습니다</p>
+          </p>
+        </div>
+      </div>
+
+
+<!--1학년페이지-->
+    <div class="Grade-page none-display">
+
+      <div class="mobile-side-menu-a">   <!--모바일 사이드 메뉴-->
+          <a class="button" onclick="changeContentA(0)">4월</a>
+          <a class="button" onclick="changeContentA(1)">5월</a>
+          <a class="button" onclick="changeContentA(2)">6월</a>
+          <a class="button" onclick="changeContentA(3)">7월</a>
+          <a class="button" onclick="changeContentA(4)">8월</a>
+          <a class="button" onclick="changeContentA(5)">9월</a>
+          <a class="button" onclick="changeContentA(6)">10월</a>
+          <a class="button" onclick="changeContentA(7)">11월</a>
+          <a class="button" onclick="changeContentA(8)">12월</a>
+      </div>
+      <div class="rule-main-box-a">
+          <div class="intro-title"><1학년 대회일정></div>
+          <p class="sub-title">대회일정 페이지에 오신걸 환영합니다!</p>
+          <p class="sub-title">
+            -월별 대회를 확인해 보세요-<br>(pc는 좌측, 모바일은 상단)
+            <br>
+          </p>
+          <div class="intro-tip-box">
+            <p id="intro-tip-text">TIP!</p>
+            <p id="intro-tip-text">계열구분: 이공, 인문, 공통</p>
+            <p id="intro-tip-text">대회신청: < <a href="https://sorabol.riroschool.kr/" target="_blank" class=intro-hyperlink>서진솔</a> 바로가기 > </p>
+            <p id="intro-tip-text">수상비율: 참가자의 20%</p>
+            <p id="intro-tip-text">※ 계열구분은 참가대상과는 관련이 없습니다</p>
+          </p>
+        </div>
+      </div>
+      <!--위로가기버튼
+          <a href="#" class="top-button" style="color: black"><img src="up-arrow-flat.png"></a>
+      -->
+      <div class="side-menu-a"> <!--side-opacity => display: none-->
+        <a onclick="changeContentA(0)">4월</a>
+        <a onclick="changeContentA(1)">5월</a>
+        <a onclick="changeContentA(2)">6월</a>
+        <a onclick="changeContentA(3)">7월</a>
+        <a onclick="changeContentA(4)">8월</a>
+        <a onclick="changeContentA(5)">9월</a>
+        <a onclick="changeContentA(6)">10월</a>
+        <a onclick="changeContentA(7)">11월</a>
+        <a onclick="changeContentA(8)">12월</a>
+      </div>
+
+      <!--4월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">4월</span>
+              <ul class="contest-name-pc">
+              <!--4월-->
+                <li class="contest-name-pc">
+
+                <span><strong class="contest-name-pc">서울학생<br>과학발명품<br>경진대회(학교예선)</strong></span>
+                <ul id="hashtags-pc">
+                  <span class="contest-name-pc">#이공계열</span>
+                  <span class="contest-name-pc">#전학년</span>
+                  <span class="contest-name-pc">#20%</span>
+                </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--5월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+              <div class="Grade1-pc">
+                <span class="month-value-pc">5월</span>
+                <ul class="contest-name-pc">
+                  <!--5월-->
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">과학퀴즈골든벨</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">서울시청소년<br>과학탐구대회</strong></span> <!--학교예선-->
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">과학독후감대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#공통계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">사회논구술<br>경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">영어경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">국어경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">시화전</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#공통계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+                    <div style="clear:both"></div> <div class="null-space"></div>
+              </div>
+      <!--6월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+                <div class="Grade1-pc">
+                  <span class="month-value-pc">6월</span>
+                  <ul class="contest-name-pc">
+                    <!--6월-->
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">독후감상문대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#공통계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">수학사경시대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">한자경시대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">서라벌토론대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--7월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+                    <div class="Grade1-pc">
+                      <span class="month-value-pc">7월</span>
+                      <ul class="contest-name-pc">
+                        <!--7월-->
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">골드버그대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">희망자서전<br>쓰기대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">서동요소감문<br>대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--8월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">8월</span>
+              <ul class="contest-name-pc">
+                <!--8월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학활동소감문<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">서울시학생탐구<br>발표대회<br>(학교예선)</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--9월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">9월</span>
+              <ul class="contest-name-pc">
+                <!--9월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학캠프보고서<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">기악콩쿠르</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">영어어휘<br>경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">창의로봇<br>경진대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--10월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">10월</span>
+              <ul class="contest-name-pc">
+                <!--10월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">한국사경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--11월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">11월</span>
+              <ul class="contest-name-pc">
+                <!--11월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">독후감상문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수리과학<br>컨퍼런스</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인문사회논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학활동<br>소감문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">이공계강연<br>소감문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인포그래피대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">자율동아리활동<br>성과물발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">창의프로젝트<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">서동요소감문<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--12월-->
+          <div class="content-boxA none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">12월</span>
+              <ul class="contest-name-pc">
+                <!--12월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">미술활동종합<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">R&E과학<br>창의력대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">봉사활동체험<br>수기대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+
+
+    </div>
+<!--2학년 페이지-->
+    <div class="Grade-page none-display">
+
+      <div class="mobile-side-menu-b">
+        <a class="button" onclick="changeContentB(0)">4월</a>
+        <a class="button" onclick="changeContentB(1)">5월</a>
+        <a class="button" onclick="changeContentB(2)">6월</a>
+        <a class="button" onclick="changeContentB(3)">7월</a>
+        <a class="button" onclick="changeContentB(4)">8월</a>
+        <a class="button" onclick="changeContentB(5)">9월</a>
+        <a class="button" onclick="changeContentB(6)">10월</a>
+        <a class="button" onclick="changeContentB(7)">11월</a>
+        <a class="button" onclick="changeContentB(8)">12월</a>
+      </div>
+
+      <div class="rule-main-box-b">
+          <div class="intro-title" style=""><2학년 대회일정></div>
+          <p class="sub-title">대회일정 페이지에 오신걸 환영합니다!</p>
+          <p class="sub-title">
+            -월별 대회를 확인해 보세요-<br>(pc는 좌측, 모바일은 상단)
+            <br>
+          </p>
+          <div class="intro-tip-box">
+            <p id="intro-tip-text">TIP!</p>
+            <p id="intro-tip-text">계열구분: 이공, 인문, 공통</p>
+            <p id="intro-tip-text">대회신청: < <a href="https://sorabol.riroschool.kr/" target="_blank" class=intro-hyperlink>서진솔</a> 바로가기 > </p>
+            <p id="intro-tip-text">수상비율: 참가자의 20%</p>
+            <p id="intro-tip-text">※ 계열구분은 참가대상과는 관련이 없습니다</p>
+          </p>
+        </div>
+      </div>
+      <!--위로가기버튼
+          <a href="#" class="top-button" style="color: black"><img src="up-arrow-flat.png"></a>
+      -->
+
+      <div class="side-menu-b"> <!--side-opacity => display: none-->
+        <a onclick="changeContentB(0)">4월</a>
+        <a onclick="changeContentB(1)">5월</a>
+        <a onclick="changeContentB(2)">6월</a>
+        <a onclick="changeContentB(3)">7월</a>
+        <a onclick="changeContentB(4)">8월</a>
+        <a onclick="changeContentB(5)">9월</a>
+        <a onclick="changeContentB(6)">10월</a>
+        <a onclick="changeContentB(7)">11월</a>
+        <a onclick="changeContentB(8)">12월</a>
+      </div>
+
+      <!--2학년===PC-->
+      <!--4월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">4월</span>
+              <ul class="contest-name-pc">
+              <!--4월-->
+                <li class="contest-name-pc">
+
+                <span><strong class="contest-name-pc">서울학생<br>과학발명품<br>경진대회(학교예선)</strong></span>
+                <ul id="hashtags-pc">
+                  <span class="contest-name-pc">#이공계열</span>
+                  <span class="contest-name-pc">#전학년</span>
+                  <span class="contest-name-pc">#20%</span>
+                </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--5월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+              <div class="Grade1-pc">
+                <span class="month-value-pc">5월</span>
+                <ul class="contest-name-pc">
+                  <!--5월-->
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">과학퀴즈골든벨</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">서울시청소년<br>과학탐구대회</strong></span> <!--학교예선-->
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">과학독후감대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#공통계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">사회논구술<br>경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">영어경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">국어경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">시화전</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#공통계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+                    <div style="clear:both"></div> <div class="null-space"></div>
+              </div>
+      <!--6월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+                <div class="Grade1-pc">
+                  <span class="month-value-pc">6월</span>
+                  <ul class="contest-name-pc">
+                    <!--6월-->
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">독후감상문대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#공통계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">수학사경시대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">한자경시대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">서라벌토론대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--7월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+                    <div class="Grade1-pc">
+                      <span class="month-value-pc">7월</span>
+                      <ul class="contest-name-pc">
+                        <!--7월-->
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">골드버그대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">희망자서전<br>쓰기대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">서동요소감문<br>대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--8월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">8월</span>
+              <ul class="contest-name-pc">
+                <!--8월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학활동소감문<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">서울시학생탐구<br>발표대회<br>(학교예선)</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--9월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">9월</span>
+              <ul class="contest-name-pc">
+                <!--9월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학캠프보고서<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">기악콩쿠르</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">영어어휘<br>경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">창의로봇<br>경진대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--10월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">10월</span>
+              <ul class="contest-name-pc">
+                <!--10월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">한국사경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--11월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">11월</span>
+              <ul class="contest-name-pc">
+                <!--11월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">독후감상문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수리과학<br>컨퍼런스</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인문사회논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학활동<br>소감문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">이공계강연<br>소감문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인포그래피대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">자율동아리활동<br>성과물발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">창의프로젝트<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">서동요소감문<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--12월-->
+          <div class="content-boxB none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">12월</span>
+              <ul class="contest-name-pc">
+                <!--12월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">미술활동종합<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">R&E과학<br>창의력대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">봉사활동체험<br>수기대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+    </div>
+<!--3학년 페이지-->
+    <div class="Grade-page none-display">
+
+      <div class="mobile-side-menu-c">
+          <a class="button" onclick="changeContentC(0)">4월</a>
+          <a class="button" onclick="changeContentC(1)">5월</a>
+          <a class="button" onclick="changeContentC(2)">6월</a>
+          <a class="button" onclick="changeContentC(3)">7월</a>
+          <a class="button" onclick="changeContentC(4)">8월</a>
+          <a class="button" onclick="changeContentC(5)">9월</a>
+          <a class="button" onclick="changeContentC(6)">10월</a>
+          <a class="button" onclick="changeContentC(7)">11월</a>
+          <a class="button" onclick="changeContentC(8)">12월</a>
+      </div>
+
+      <div class="rule-main-box-c">
+          <div class="intro-title" style=""><3학년 대회일정></div>
+          <p class="sub-title">대회일정 페이지에 오신걸 환영합니다!</p>
+          <p class="sub-title">
+            -월별 대회를 확인해 보세요-<br>(pc는 좌측, 모바일은 상단)
+            <br>
+          </p>
+          <div class="intro-tip-box">
+            <p id="intro-tip-text">TIP!</p>
+            <p id="intro-tip-text">계열구분: 이공, 인문, 공통</p>
+            <p id="intro-tip-text">대회신청: < <a href="https://sorabol.riroschool.kr/" target="_blank" class=intro-hyperlink>서진솔</a> 바로가기 > </p>
+            <p id="intro-tip-text">수상비율: 참가자의 20%</p>
+            <p id="intro-tip-text">※ 계열구분은 참가대상과는 관련이 없습니다</p>
+          </p>
+        </div>
+      </div>
+      <!--위로가기버튼
+          <a href="#" class="top-button" style="color: black"><img src="up-arrow-flat.png"></a>
+      -->
+      <div class="side-menu-c"> <!--side-opacity => display: none-->
+        <a onclick="changeContentC(0)">4월</a>
+        <a onclick="changeContentC(1)">5월</a>
+        <a onclick="changeContentC(2)">6월</a>
+        <a onclick="changeContentC(3)">7월</a>
+        <a onclick="changeContentC(4)">8월</a>
+        <a onclick="changeContentC(5)">9월</a>
+        <a onclick="changeContentC(6)">10월</a>
+        <a onclick="changeContentC(7)">11월</a>
+        <a onclick="changeContentC(8)">12월</a>
+      </div>
+
+      <!--3학년===PC-->
+      <!--4월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">4월</span>
+              <ul class="contest-name-pc">
+              <!--4월-->
+                <li class="contest-name-pc">
+
+                <span><strong class="contest-name-pc">서울학생<br>과학발명품<br>경진대회(학교예선)</strong></span>
+                <ul id="hashtags-pc">
+                  <span class="contest-name-pc">#이공계열</span>
+                  <span class="contest-name-pc">#전학년</span>
+                  <span class="contest-name-pc">#20%</span>
+                </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--5월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+              <div class="Grade1-pc">
+                <span class="month-value-pc">5월</span>
+                <ul class="contest-name-pc">
+                  <!--5월-->
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">과학퀴즈골든벨</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">서울시청소년<br>과학탐구대회</strong></span> <!--학교예선-->
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">과학독후감대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#이공계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#공통계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">사회논구술<br>경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">영어경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">국어경시대회</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#인문계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                  <li class="contest-name-pc">
+                    <span><strong class="contest-name-pc">시화전</strong></span>
+                    <ul id="hashtags-pc">
+                      <span class="contest-name-pc">#공통계열</span>
+                      <span class="contest-name-pc">#전학년</span>
+                      <span class="contest-name-pc">#20%</span>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+                    <div style="clear:both"></div> <div class="null-space"></div>
+              </div>
+      <!--6월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+                <div class="Grade1-pc">
+                  <span class="month-value-pc">6월</span>
+                  <ul class="contest-name-pc">
+                    <!--6월-->
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">독후감상문대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#공통계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">수학사경시대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">한자경시대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                    <li class="contest-name-pc">
+                      <span><strong class="contest-name-pc">서라벌토론대회</strong></span>
+                      <ul id="hashtags-pc">
+                        <span class="contest-name-pc">#이공계열</span>
+                        <span class="contest-name-pc">#전학년</span>
+                        <span class="contest-name-pc">#20%</span>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--7월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+                    <div class="Grade1-pc">
+                      <span class="month-value-pc">7월</span>
+                      <ul class="contest-name-pc">
+                        <!--7월-->
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">골드버그대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">희망자서전<br>쓰기대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                        <li class="contest-name-pc">
+                          <span><strong class="contest-name-pc">서동요소감문<br>대회</strong></span>
+                          <ul id="hashtags-pc">
+                            <span class="contest-name-pc">#이공계열</span>
+                            <span class="contest-name-pc">#전학년</span>
+                            <span class="contest-name-pc">#20%</span>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--8월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">8월</span>
+              <ul class="contest-name-pc">
+                <!--8월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학활동소감문<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">서울시학생탐구<br>발표대회<br>(학교예선)</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--9월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">9월</span>
+              <ul class="contest-name-pc">
+                <!--9월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학캠프보고서<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">기악콩쿠르</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">영어어휘<br>경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">창의로봇<br>경진대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인문학심포지엄</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--10월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">10월</span>
+              <ul class="contest-name-pc">
+                <!--10월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">한국사경시대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--11월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">11월</span>
+              <ul class="contest-name-pc">
+                <!--11월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">독후감상문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">천체사진공모전</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수리과학<br>컨퍼런스</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">수학논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인문사회논문<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">과학활동<br>소감문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">이공계강연<br>소감문대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">인포그래피대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">자율동아리활동<br>성과물발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">창의프로젝트<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">서동요소감문<br>대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+      <!--12월-->
+          <div class="content-boxC none-display" style="background-color: #f4f4f4;">
+            <div class="Grade1-pc">
+              <span class="month-value-pc">12월</span>
+              <ul class="contest-name-pc">
+                <!--12월-->
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">미술활동종합<br>발표대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">R&E과학<br>창의력대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+                <li class="contest-name-pc">
+                  <span><strong class="contest-name-pc">봉사활동체험<br>수기대회</strong></span>
+                  <ul id="hashtags-pc">
+                    <span class="contest-name-pc">#이공계열</span>
+                    <span class="contest-name-pc">#전학년</span>
+                    <span class="contest-name-pc">#20%</span>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="clear:both"></div> <div class="null-space"></div>
+          </div>
+
+
+
+      </div>
+
+  <div style="clear:both"></div>
+<!--footer-->
+    <div class="footer">
+        <a class="footer-logo" href="https://www.facebook.com/SorabolIT/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a class="footer-logo" href="https://github.com/NapolDeveloper/sorabol" target="_blank"><i class="fab fa-github-square"></i></a>
+
+        <p style="margin-top: 40px;">제작자</p>
+        <p>김현재 | 김규석 | 이다솔 | 허준하</p><br>
+
+        <p>문의 : loma1016@gmail.com</p>
+
+        <p>(C) 2018. Noisy IT co. all rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

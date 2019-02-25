@@ -1,0 +1,211 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>INTRODUCTION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/keep.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/header.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/sidemenu.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/intro.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/footer.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/animation.css"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script src="../js/keep.js"></script>
+    <script src="../js/sidemenu.js"></script>
+    <script src="../js/mobilesidemenu.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/urlmanage.js"></script>
+    <script>
+        new WOW().init(); //wow.js 라이브러리 스크롤 애니메이션
+    </script>
+
+</head>
+    <body class="fadeIn">
+       <div class="menu-side">
+        <a class="menu-side-close" onclick="closeNav()" style="cursor: pointer;">&times;</a>
+        <a href="main.html">메인</a>
+        <a href="club-main.html">동아리</a>
+        <a href="contest-allgrade.html">대회</a>
+        <a href="intro.html">학교소개</a>
+        <a onclick="url_confirm_road()">로드뷰</a>
+        <a onclick="alertMessage('학교생활 Tip페이지는 이후 업데이트가 이루어질 예정입니다.')">학교생활 Tip</a>
+    </div>
+    <div class="menu-side-open" onclick="openNav()">
+        <i class="fas fa-bars menu-side-open-icon"></i>
+    </div>
+      
+       <div class="main-container">
+       
+        <div class="menu-bar wow fadeInDown" data-wow-duration="1s">
+            <a href="main.html">메인</a>
+            <a href="club-main.html">동아리</a>
+            <a href="contest-allgrade.html">대회</a>
+            <a href="intro.html">학교소개</a>
+            <a onclick="url_confirm_road()">로드뷰</a>
+            <a onclick="alertMessage('학교생활 Tip페이지는 이후 업데이트가 이루어질 예정입니다.')">학교생활 Tip</a>
+        </div>
+
+    <div class="side-menu" style="height:128px;"> <!--side-opacity => display: none-->
+        <a onclick="changeContent(0)">INTRO</a>
+        <a onclick="changeContent(1)">학교시설</a>
+        <a onclick="changeContent(2)">일정</a>
+    </div>
+
+    <div class="header">
+        <div class="header-title" style="text-align: center;">
+            <a>INTRODUCTION</a> <!--메인페이지로 이동하기 추가 미정-->
+        </div>
+        <div class="header-sub">
+            <p>서라벌고등학교에 대해 알아보세요</p>
+        </div>
+        <div class="mobile-side-menu">
+            
+            <a class="button" onclick="changeContent(0)">학교소개</a>
+            <a class="button" onclick="changeContent(1)">학교시설</a>
+            <a class="button" onclick="changeContent(2)">일정</a>  
+        </div>
+    </div>
+
+    <div class="rule-main-box">
+        <div class="intro-main">
+            <div class="intro-title" style="width: 100%; font-size:50px; height: 110px;">서라벌고등학교, <h style="font-size:70px; font-weight: bolder;">학교INTRO</h></div>
+            <div class="intro-sub-title">학교소개 페이지에 오신걸 환영합니다!</div>
+            <div class="intro-sub-title">이곳에서는 서라벌고등학교에 대해 소개해드립니다.</div>
+            <div class="intro-sub-title">이 페이지는 서라벌고등학교 홈페이지와 정보를 바탕으로 제작되었습니다.</div>
+        </div>
+        <div class="intro-sub" style="background-color : rgb(247,247,247);">
+            <div class="intro-title-a" stylr="widht:100%; font-size: 80px;">SORABAL INTRO ALL</div>
+            <div class="intro-sub-content" style="margin-top:30px;">서라벌고등학교 INTRO는 학교에 대한 기본적인 소개을 제공합니다.</div>
+            <div class="intro-sub-content">학교소개, 시간표, 장소를 편하게 참고하세요.</div>
+            
+            <div class="intro-sub-p" style= "font-size: 45px; color: #5CAB7D;" >INTRO</div>
+            <div class="intro-sub-content">서라벌고등학교의 기본적인 소개 INTRO에서 확인하세요.</div>
+            <div class="intro-sub-content">학교 교육과 방과후학교 진로진학 교훈에 대해 소개합니다.</div>
+            
+            <div class="intro-sub-p" style= "font-size: 45px; color: #5CAB7D;" >FACILITY</div>
+            <div class="intro-sub-content">서라벌고등학교의 시설들을 한눈에 학교시설에서 확인하세요.</div>
+            <div class="intro-sub-content">서라벌의 시설들을 사진과 함께 보여드립니다.
+            </div>
+            
+            <div class="intro-sub-p" style= "font-size: 45px; color: #5CAB7D;" >SCHEDULE</div>
+            <div class="intro-sub-content">서라벌고등학교의 시간표를 일정에서 확인하세요.</div>
+            <div class="intro-sub-content" style="margin-bottom:60px">시간별 서라벌고등학교의 생활에 대하여 소개합니다.</div>
+    </div>
+</div>
+
+
+    <div class="content-box none-display" style="background-color: #f4f4f4; height :1800px;">
+       <div class="intro-sub-main1">
+                <div class="intro-title-1">INTRODUCTION</div>
+                <div class="intro-sub-title" style="margin-top : 100px;">지금부터 서라벌고등학교에 대해 소개합니다.</div>
+                <div class="intro-sub-title">SORABAL HIGH SCHOOL</div>
+                <div class="intro-sub-title">같지만 다른 학교 비긴 어게인 서라벌</div>
+            </div>
+            <div class="intro-sub-main2">
+               <h1 style="text-align: center; font-size: 45px; color: #5CAB7D">빛나는 전통속에 앞서가는 서라벌</h1>
+               <h6 style="text-align: center; padding-top: 40px;">굳세고 씩씩하며 참되고 슬기로워 나라 빛낼 일꾼 되자.</h6>
+               <h6 style="text-align: center; padding-top: 20px;">더불어 즐겁게 가르치고 배워 새로워지는 세상에 앞장선다.</h6>
+               <h6 style="text-align: center; padding-top: 20px;">1956.3월 개교 사립, 남고 44학급.</h6>
+               <h6 style="text-align: center; padding-top: 20px;">개교 60년의 넘어 새로운 100년을 향한 창의융합형 인재 양성.</h6>
+           </div>
+        <div class="intro-sub-main1" style="height:440px; padding-top:90px;">
+            <h1 style="text-align: center; font-size: 45px;color: #5CAB7D">같지만 다른 교육 서라벌</h1>
+            <h6 style="text-align: center; padding-top: 40px;">지성과 감성 인성의 조화를 추구하는 창의교육 프로그램!</h6>
+            <h6 style="text-align: center; padding-top: 20px;">영재학급운영, 인문학 심포지엄, 수리과학 컨퍼런</h6>
+            <h6 style="text-align: center; padding-top: 20px;">친구 선생님 동문이 함께하는 더불어 교육!</h6>
+            <h6 style="text-align: center; padding-top: 20px;">한무릎공부, 자율동아리, 사제동행, 과학캠프, 서동요</h6>
+        </div>
+        <div class="intro-sub-main2">
+            <h1 style="text-align: center; font-size: 45px;color: #5CAB7D">사교육 없는 방과후 학교</h1>
+            <h6 style="text-align: center; padding-top: 40px;">서라벌방과후학교 서라벌아카데미</h6>
+            <h6 style="text-align: center; padding-top: 20px;">교과전과목 방과후 학교 운영!!</h6>
+            <h6 style="text-align: center; padding-top: 20px;">학생전공방과후 및 특화방과후 추가 운영!!</h6>
+            <h6 style="text-align: center; padding-top: 20px;">서라벌고등학교 야간 자율학습</h6>
+            <h6 style="text-align: center; padding-top: 20px;">연중무휴 자기주도학습실 850석 개방</br></h6>
+        </div>
+    </div>
+    
+    
+    <div class="content-box none-display" style="background-color: #f4f4f4; height: 4300px;">
+        <div class="intro-sub-main1">
+            <div class="intro-title-1">FACILITY</div>
+            <div class="intro-sub-title" style="margin-top : 100px;">지금부터 서라벌고등학교의 곳곳에 대해 알려드립니다.</div>
+            <div class="intro-sub-title">SORABAL HIGH SCHOOL</div>
+            <div class="intro-sub-title">깨긋하고 안전한 서라벌고등학교에서 꿈을 키우자.</div>
+        </div>
+        <div class="intro-sub-main3" style="background-color : rgb(247,247,247);">
+           <h1 style="text-align: center; font-size: 45px;"><h>SKY로 가는 지름길</h> 하버드룸</h1>
+           <img src="../img/h1.png" style="width:1000px; display: block; margin: 0px auto; margin-top: 50px;">
+       </div>
+    <div class="intro-sub-main3">
+        <h1 style="text-align: center; font-size: 45px;"><h>혼자 조용히 공부하는 법</h> 야간자율학습실</h1>
+        <img src="../img/h2.png" style="width:1000px; display: block; margin: 0px auto; margin-top: 50px;">
+    </div>
+    <div class="intro-sub-main3" style="background-color : rgb(247,247,247);">
+        <h1 style="text-align: center; font-size: 45px;"><h>학교생활중 응급상황에는</h> 보건실</h1>
+        <img src="../img/h3.png" style="width:1000px; display: block; margin: 0px auto; margin-top: 50px;">
+    </div>
+    <div class="intro-sub-main3">
+        <h1 style="text-align: center; font-size: 45px;"><h>3교시 종이 울리자 마자</h> 교내식당</h1>
+        <img src="../img/h4.png" style="width:1000px; display: block; margin: 0px auto; margin-top: 50px;">
+    </div>
+    <div class="intro-sub-main3" style="background-color : rgb(247,247,247);">
+        <h1 style="text-align: center; font-size: 45px;"><h>점심시간이나 체육시간에는</h> 강당</h1>
+        <img src="../img/h5.png" style="width:1000px; display: block; margin: 0px auto; margin-top: 50px;">
+    </div>
+    <div class="intro-sub-main3">
+        <h1 style="text-align: center; font-size: 45px;"><h>날씨 좋을땐 밖으로 나가자</h> 잔디운동장</h1>
+        <img src="../img/h6.png" style="width:1000px; display: block; margin: 0px auto; margin-top: 50px;">
+    </div>
+    <div class="intro-sub-main3" style="background-color : rgb(247,247,247);">
+        <h1 style="text-align: center; font-size: 45px;"><h>선생님과 친구들과 함께하는</h> 학급교실</h1>
+        <img src="../img/h7.png" style="width:1000px; display: block; margin: 0px auto; margin-top: 50px;">
+    </div>
+    <div class="intro-sub-main3">
+        <h1 style="text-align: center; font-size: 45px;"><h>학교대표강연들은 여기서</h> 사순선아트홀</h1>
+        <img src="../img/h8.png" style="width:1000px; display: block; margin: 0px auto; margin-top: 50px;">
+    </div>
+</div>
+    
+    
+    <div class="content-box none-display" style="background-color: #f4f4f4;">
+        <div class="intro-sub-main1">
+            <div class="intro-title-1">SCHEDULE</div>
+            <div class="intro-sub-title" style="margin-top : 100px;">지금부터 시간계획표에 대해 알아보겠습니다.</div>
+            <div class="intro-sub-title">SORABAL HIGH SCHOOL</div>
+            <div class="intro-sub-title">철저한 시간관리 서라벌고등학교</div>
+        </div>
+        <div class="intro-sub-main-s">
+           <h1 style="text-align: center; font-size: 45px; color: #5CAB7D">체계적인 시간관리</h1>
+           <h6 style="text-align: center; padding-top: 40px;">1교시부터 7교시까지 짜여진 시간표.</h6>
+           <h6 style="text-align: center; padding-top: 20px;">수학 과학 국어 영어 등등 여러 과목을 조리있게 짠 시간표.</h6>
+           <h6 style="text-align: center; padding-top: 20px;">우리학교 등교시간은 7시 50분입니다.</h6>
+       </div>
+    <div class="intro-sub-main-i" style="height:1200px; padding-top:90px;">
+        <h1 style="text-align: center; font-size: 45px; color: #5CAB7D">서라벌고등학교에서의 7교시</h1>
+        <h6 style="text-align: center; padding-top: 20px;">각 학급과 학년의 시간표는 추후 추가하도록하겠습니다.</h6>
+        <img src="../img/s1.png" style="width:auto; display: block; margin: 0px auto; margin-top: 50px; height: 800px;;">
+    </div>
+   </div>
+   
+       
+    <div class="footer">
+        <a class="footer-logo" href="https://www.facebook.com/SorabolIT/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a class="footer-logo" href="https://github.com/NapolDeveloper/sorabol" target="_blank"><i class="fab fa-github-square"></i></a>
+
+        <p style="margin-top: 40px;">제작자</p>
+        <p>김현재 | 김규석 | 이다솔 | 허준하</p><br>
+
+        <p>문의 : loma1016@gmail.com</p>
+
+        <p>(C) 2018. Noisy IT co. all rights reserved.</p>
+    </div>
+
+</div>
+
+</body>
+
+</html>
